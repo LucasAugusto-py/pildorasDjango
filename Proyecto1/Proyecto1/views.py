@@ -1,4 +1,4 @@
 from django.http import HttpResponse
 
-def index(request):
+def saludo(request):
     return HttpResponse("Hola mundo con Django")
