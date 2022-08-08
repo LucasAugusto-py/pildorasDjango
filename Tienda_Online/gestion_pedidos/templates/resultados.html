@@ -1,0 +1,20 @@
+{% extends 'busqueda.html' %}
+
+{% block body %}
+
+    <p>Estas buscando <strong>{{query}}</strong></p>
+    {% if articulos %}
+        <p>
+            Ariticulos encontrados: {{articulos|length}} articulos
+            <ul>
+                {% for articulo in articulos %}
+                <li>
+                    {{articulo.nombre}} {{articulo.seccion}} {{articulo.precio}}
+                </li>
+                {% endfor %}
+            </ul>
+        </p>
+    {% else %}
+        <p>Artículo no encontrado</p>
+    {% endif %}
+{% endblock body %}
